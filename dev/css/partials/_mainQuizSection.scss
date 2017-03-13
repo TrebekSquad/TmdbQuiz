@@ -79,15 +79,35 @@ section.main {
 
 .main__game input[type=submit] {
 	display: block;
-	width: 200px;
-	margin: 20px auto;
-	padding: 20px 10px;
+	width: 400px;
+	margin: 0 auto;
 }
 
 #againButton {
 	margin: 50px auto;
 }
 
+
+// @media all and (max-width: 768px){
+// 		display: block;
+// 		&:after {
+// 			content: 'flickity';
+// 			display: none; /* hide :after */
+// 		}
+// 		.flickity-prev-next-button  {
+// 			background: none;
+// 			&:hover {
+// 				background: none;
+// 			}
+// 			.arrow{
+// 				fill: lightgrey;
+// 				&:hover {
+// 					fill: white;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 //======================================
 //            MEDIA QUERIES              
 //======================================
@@ -104,7 +124,22 @@ section.main {
  
 // Landscape phone to portrait tablet
 @media (max-width: 767px) {
-	
+	.main__game__categories {
+		display: block;
+		width: 100%;
+		&:after {
+			content: 'flickity';
+			display: none; /* hide :after */
+		}
+	.gameCategory{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+.flickity-prev-next-button.previous, .flickity-prev-next-button.next {
+	background: none;
+}
 }
  
 // Landscape phones and down

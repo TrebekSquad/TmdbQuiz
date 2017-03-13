@@ -11,30 +11,31 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto+Slab:100,300,400,700" rel="stylesheet">
 		<!-- Font Awesome -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css">
 	</head>
 	<body>
 		<!-- Go team trebek! -->
 		<!--SPLASH PAGE START -->
 		<main class="main__game">
-			<div class="container">
-				<section class="landingSplash">
-					<div class="wrapper">
-						<div class="landingSplash__container">
-							<div class="landingSplash__title">
-								<h1>The Movie Database Quiz!</h1>
-								<p>By the Trebek Squad: Peter E., Michelle C., Jesse B. and Mark W.</p>
-							</div>
-							<form action="">
-								<label for="yearSelection">Select a Decade!</label>
-								<select name="decade" id="yearSelection">
-									<option value="1960">60's</option>
-									<option value="1970">70's</option>
-									<option value="1980">80's</option>
-									<option value="1990">90's</option>
-									<option value="2000">00's</option>
-								</select>
-								<button type="submit" value="Play" id="submitButton">Play</button>
-							</form>
+		<div class="container">
+			<section class="landingSplash">
+				<div class="wrapper">
+					<div class="landingSplash__container">
+						<div class="landingSplash__title">
+							<h1>The Movie Database Quiz!</h1>
+							<p>By the Trebek Squad: Peter E., Michelle C., Jesse B. and Mark W.</p>
+						</div>
+						<form action="">
+							<label for="yearSelection">Select a Decade!</label>
+							<select name="decade" id="yearSelection">
+								<option value="1960">60's</option>
+								<option value="1970">70's</option>
+								<option value="1980">80's</option>
+								<option value="1990">90's</option>
+								<option value="2000">00's</option>
+							</select>
+							<button type="submit" value="Play" id="submitButton">Play</button>
+						</form>
 						</div> <!-- landingSplash_container -->
 					</div>
 				</section>
@@ -50,17 +51,17 @@
 							</header>
 							<!--GAME BOARD-->
 							<!--main go here -->
-							<div class="main__game__categories">
-								<ul class="main__game__category__year gameCategory">
-									<li class="category category1">Initial Release</li>
+							<div class="main__game__categories carousel">
+								<ul class="carousel-cell main__game__category__year gameCategory">
+									<li class="category category1">Name the Date</li>
 								</ul>
-								<ul class="main__game__category__desc gameCategory">
+								<ul class="carousel-cell main__game__category__desc gameCategory">
 									<li class="category category2">The Plot Thickens</li>
 								</ul>
-								<ul class="main__game__category__cast gameCategory">
-									<li class="category category3">Leading Roles</li>
+								<ul class="carousel-cell main__game__category__cast gameCategory">
+									<li class="category category3">Name the Actor</li>
 								</ul>
-								<ul class="main__game__category__rev gameCategory">
+								<ul class="carousel-cell main__game__category__rev gameCategory">
 									<li class="category category4">Highest Earners</li>
 								</ul>
 								<!-- <ul class="main__game__category5 gameCategory">
@@ -72,51 +73,52 @@
 				</section>
 				<!--GAME PAGE END -->
 				<!--GAME QUESTION WINDOW START-->
-					<section class="questions">
-						<div class="wrapper">
+				<section class="questions">
+					<div class="wrapper">
 						<button class="questions__giveUp">Pass</button>
-							<div class="questions__text"> 
-							</div>
-							<!--Radio Buttons-->
-							<form action="submit" id="radioButtonsYear">
-								<div class="questions__options">
-									
-								</div>
-								<input type="submit" class="">
-							</form>
+						<div class="questions__text">
 						</div>
-					</section>
+						<!--Radio Buttons-->
+						<form action="submit" id="radioButtonsYear">
+							<div class="questions__options">
+								
+							</div>
+							<input type="submit" class="">
+						</form>
+					</div>
+				</section>
 				<!--GAME QUESTION WINDOW END-->
 				<!--SCORE WINDOW START-->
 				<div class="scores__fade">
-				<section class="scores">
-					<p class="yourScoreGoesHere"></p>
-					<div class="wrapper">
-						<h2 class="scores_title">High Scores</h2>
-						<ul class="scores__results">
-
-						</ul>
-					</div>
-				<footer>
-					<p class="footer__copyright">&copy; 2017 Trebek Squad. All rights reserved.</p>
-				</footer>
-				</section>
+					<section class="scores">
+						<p class="yourScoreGoesHere"></p>
+						<div class="wrapper">
+							<h2 class="scores_title">High Scores</h2>
+							<ul class="scores__results">
+							</ul>
+						</div>
+						<footer>
+							<p class="footer__copyright">&copy; 2017 Trebek Squad. All rights reserved.</p>
+						</footer>
+					</section>
 				</div>
 				<!--SCORE WINDOW END-->
-			</div> <!-- wrapper -->
-		</main>
-		<section class="highScoreinput">
-			<form class="highScoreinput__form" action="">
-				<h2>New High Score!</h2>
-				<p class="highScoreinput__blerb">You beat a high score!</p>
-				<label for="nameInput">Enter Your Name</label>
-				<input class="newHighName" type="text">
-				<input  type="submit" value="Submit High Score">
-			</form>
-		</section>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-		<script src="dev/js/js.js"></script>	
-	</body>
-</html>
+				</div> <!-- wrapper -->
+				</main>
+				<section class="highScoreinput">
+					<form class="highScoreinput__form" action="">
+						<h2>New High Score!</h2>
+						<p class="highScoreinput__blerb">You beat a high score!</p>
+						<label for="nameInput">Enter Your Name</label>
+						<input class="newHighName" type="text">
+						<input  type="submit" value="Submit High Score">
+					</form>
+				</section>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js"></script>
+				
+				<script src="dev/js/js.js"></script>
+			</body>
+		</html>

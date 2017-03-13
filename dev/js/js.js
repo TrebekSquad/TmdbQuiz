@@ -249,13 +249,13 @@
  					$('.yourScoreGoesHere').text('Ouch! Your final score was ' + quizApp.userScore + '!');
  				}
  				let highFound = false;
- 				quizApp.highScores.forEach((score, index)=> {
- 					if(quizApp.userScore > score.score && highFound === false) {
+ 				quizApp.highScores.forEach((score, index) => {
+ 					if (quizApp.userScore > score.score && highFound === false) {
  						highFound = true;
  						$('.highScoreinput__blerb').text('Your score was higher than the number ' + (index + 1) + ' score of ' + score.score + '! Enter your name and hit submit!')
  						quizApp.userScoreTakeoverNum = index;
  						$('.highScoreinput').fadeIn('slow', function() {
- 							
+
  						});
  					}
  				})
@@ -364,7 +364,22 @@
  			quizApp.generateFiveYearQuestions();
  			quizApp.generateFiveRandomDescQuestion();
  			// quizApp.generateFiveRandomRoleQuestion();
- 			$.when(...quizApp.revMovieCheckArray).done(() => quizApp.populateGameBoard());
+ 			$.when(...quizApp.revMovieCheckArray).done(() => {
+ 				quizApp.populateGameBoard()
+ 					// $('.carousel').flickity('reloadCells');
+
+ 				setTimeout(function(){ 
+ 					var options = {
+ 						watchCSS: true,
+ 						initialIndex: 0,
+ 						wrapAround: true,
+ 						pageDots: false
+ 					};
+
+ 				$('.carousel').flickity(options);
+ 				 }, 500);
+ 			});
+
  		});
  	}
 
@@ -657,6 +672,7 @@
  	}
 
  	quizApp.init = function() {
+
  		quizApp.userScore = 0;
  		quizApp.firebaseInit();
  		quizApp.events();
