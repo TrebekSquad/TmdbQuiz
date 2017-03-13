@@ -139,8 +139,14 @@
 
 @media (max-width: 440px) {
 	.landingSplash {
+		height: 85%;
+		margin-top: 5vh;
+		padding-top: 20px;
+		.landingSplash__container {
+			margin-top: 0;
+		}
 		.landingSplash__title h1 {
-			font-size: 40px;
+			font-size: 38px;
 			line-height: 45px;
 			text-shadow:
 		    4px 4px 0 $lightbluegreen,
@@ -150,11 +156,8 @@
 		     2px 1px 0 $lightbluegreen;
 		}
 		.landingSplash__title p {
-			width: 70%;
+			width: 95%;
 			margin: 20px auto 5px auto;
-		}
-		.landingSplash__container{
-		margin-top: 10%;
 		}
 		form {
 		    width: 40%;
