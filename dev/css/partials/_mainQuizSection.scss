@@ -1,13 +1,27 @@
 section.main {
 	height: 100vh;
 	display: none;
+	background: rgba(0,0,0,.9);
 }
 .main__header {
 	text-align: center;
 }
 
+.main__header__title {
+	font-size: 30px;
+	color: $darkblue;
+	font-family: $roboto;
+	letter-spacing: 3px;
+	text-shadow: -1px 1px 3px $limegreen;
+}
+
 .main__header__score {
 	color: $lightbluegreen;
+	font-size: 20px;
+	margin: 10px auto;
+	width: 100px;
+	background: rgba(0,0,0,.5);
+	border-radius: 4px;
 }
 
 // .main__header__score:before {
@@ -29,11 +43,9 @@ section.main {
 		font-size: 25px;
 		background-color: #00A;
 		border-radius: 5px;
+		margin: 2px 0;
 		width: 100%;
-		margin: 10px 0;
-		height: 50px;
-		width: 100px;
-		// border: 1px solid white;
+		height: 90px;
 		color: yellow;
 		
 	}
@@ -124,27 +136,50 @@ section.main {
  
 // Landscape phone to portrait tablet
 @media (max-width: 767px) {
+	.main__header__title {
+		background: rgba(0,0,0,.9);
+		color: $limegreen;
+		text-shadow: -1px 1px 3px $darkblue;
+
+	}
 	.main__game__categories {
 		display: block;
 		width: 100%;
+		button {
+			width: 200px;
+			height: 90px;
+		}
 		&:after {
 			content: 'flickity';
 			display: none; /* hide :after */
 		}
-	.gameCategory{
-		width: 100%;
-		padding: 0;
-		margin: 0;
+		.gameCategory{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
 	}
-}
-.flickity-prev-next-button.previous, .flickity-prev-next-button.next {
-	background: none;
-}
+	.flickity-prev-next-button.previous, .flickity-prev-next-button.next {
+		background: none;
+		width: 80px;
+		transform: scale(0.8)
+	}
 }
  
 // Landscape phones and down
 @media (max-width: 480px) {
-	
+	.main__game__categories {
+		width: 100%;
+		button {
+			width: 150px;
+			height: 80px;
+		}
+	}
+	.flickity-prev-next-button.previous, .flickity-prev-next-button.next {
+		background: none;
+		width: 80px;
+		transform: scale(0.5)
+	}
 }
 
 
