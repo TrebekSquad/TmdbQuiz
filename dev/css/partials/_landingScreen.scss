@@ -14,6 +14,9 @@
 	bottom: 0;
 	padding-top: 50px;
 	margin-top: 10vh;
+	.landingSplash__container{
+		margin-top: 5%;
+	}
 	.landingSplash__title {
 		// position: absolute;
 		// top: 30%;
@@ -30,7 +33,7 @@
 	.landingSplash__title h1 {
 		width: 95%;
 		font-family: $roboto;
-		color: $lightbluegreen;
+		color: $darkblue;
 		font-size: 60px;
 		margin: 0 auto;
 		line-height: 65px;
@@ -39,11 +42,11 @@
 		text-align: center;
 		padding: 0 20px;
 		text-shadow:
-		    7px 7px 0 $darkblue,
-		    -3px -2px 0 $darkblue,  
-		    3px -2px 0 $darkblue,
-		    -3px 2px 0 $darkblue,
-		     3px 2px 0 $darkblue;
+		    5px 5px 0 $lightbluegreen,
+		    -3px -2px 0 $lightbluegreen,  
+		    3px -2px 0 $lightbluegreen,
+		    -3px 2px 0 $lightbluegreen,
+		     3px 2px 0 $lightbluegreen;
 	}
 	form {
 		// position: absolute;
@@ -73,9 +76,9 @@
 		border-radius: 3px;
 		margin-top: 10px;
 	}
-	// button:hover {
-		
-	//  }
+	button:hover {
+		background-color: $limegreen;
+	 }
 }
 
 
@@ -102,7 +105,7 @@
 		.landingSplash__title h1 {
 			width: 100%;
 			font-size: 60px;
-			line-height: 55px;
+			line-height: 65px;
 			letter-spacing: 5px;
 			padding: 0 20px;
 		}
@@ -137,12 +140,21 @@
 @media (max-width: 440px) {
 	.landingSplash {
 		.landingSplash__title h1 {
-			font-size: 30px;
-			line-height: 40px;
+			font-size: 40px;
+			line-height: 45px;
+			text-shadow:
+		    4px 4px 0 $lightbluegreen,
+		    -2px -1px 0 $lightbluegreen,  
+		    2px -1px 0 $lightbluegreen,
+		    -2px 1px 0 $lightbluegreen,
+		     2px 1px 0 $lightbluegreen;
 		}
 		.landingSplash__title p {
 			width: 70%;
 			margin: 20px auto 5px auto;
+		}
+		.landingSplash__container{
+		margin-top: 10%;
 		}
 		form {
 		    width: 40%;
@@ -154,4 +166,5 @@
 		    }
 		}
 	}
+
 }
